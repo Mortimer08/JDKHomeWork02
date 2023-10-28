@@ -48,7 +48,9 @@ public class Server {
     }
 
     public void addClient() {
+
         clients.add(new Client(this));
+
     }
 
     public void connectClient(Client client) {

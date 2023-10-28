@@ -4,28 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6374582b-debc-48e1-a1c2-a140f6965e6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6374582b-debc-48e1-a1c2-a140f6965e6c" name="Changes" comment="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView&#10;added">
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logfile.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/ClientWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/ServerWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/gui/ClientWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/gui/ServerWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Socket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/storage/FileStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/storage/Storage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/ui/ClientView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/ui/ServerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/gui/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/gui/ClientWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Socket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -103,6 +97,38 @@
       <option name="presentableId" value="Default" />
       <updated>1698051834636</updated>
     </task>
+    <task id="LOCAL-00001" summary="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView">
+      <created>1698237615223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698237615223</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView&#10;added">
+      <created>1698237696111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698237696111</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Server&#10;ServerView&#10;ServerWindow&#10;ClientView" />
+    <MESSAGE value="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView" />
+    <MESSAGE value="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView&#10;added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView&#10;added" />
   </component>
 </project>

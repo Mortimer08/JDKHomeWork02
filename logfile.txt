@@ -58,3 +58,10 @@ Server is already running
 Server is already running
 Server is already running
 Server stopped
+Server started
+Server is already running
+Server stopped
+Server started
+Server stopped
+Server started
+Server stopped

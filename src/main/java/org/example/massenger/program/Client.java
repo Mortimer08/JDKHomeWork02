@@ -9,24 +9,25 @@ public class Client {
     boolean connected;
     Client(Server server){
         this.server = server;
-        clientView = new ClientWindow();
+        clientView = new ClientWindow(this);
         connected = false;
+
     }
     void login(){
         server.connectClient(this);
     }
     void sendMessage(String  message){
-        server.sendMessage(message);
+        clientView.printMessage(message);
     }
     void receiveMessage(String  message){
         clientView.sendMessage();
     }
-    void connect(){
+    public void connect(){
         server.connectClient(this);
-        clientView.takeConnectedView();
+//        clientView.takeConnectedView();
         connected = true;
     }
-    void disconnect(){
+    public void disconnect(){
         clientView.takeDisconnectedView();
         connected = false;
     }
