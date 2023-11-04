@@ -73,6 +73,7 @@ public class ServerWindow extends JFrame implements ServerView {
     }
 
     public void startServer() {
+        System.out.println("Server started");
         server.start();
     }
 

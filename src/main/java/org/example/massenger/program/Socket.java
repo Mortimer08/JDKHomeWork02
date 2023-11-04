@@ -10,12 +10,27 @@ public class Socket {
         ip = defaultIP;
         port = defaultPort;
     }
-    public String getIp(){
+
+    public String getIp() {
         return ip;
 
     }
-    public String getPort(){
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public String getPort() {
 
         return String.valueOf(port);
+    }
+
+    public void setPort(String port) {
+        try {
+            this.port = Integer.valueOf(port);
+        } catch (Exception e) {
+            System.out.println("Wrong value");
+        }
+
     }
 }

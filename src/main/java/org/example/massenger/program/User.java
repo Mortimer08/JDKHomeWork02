@@ -1,20 +1,30 @@
 package org.example.massenger.program;
 
-import javax.lang.model.element.Name;
 
 public class User {
-    private String defaultName = "John Smith";
-    private String defaultPassword = "password";
+    private final String defaultName = "John Smith";
+    private final String defaultPassword = "password";
     private String name;
     private String password;
-    public User(){
+
+    public User() {
         name = defaultName;
         password = defaultPassword;
+        System.out.println();
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public String getPassword(){
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
         return password;
+    }
+    public void setPassword(String password){
+        this.password = password;
     }
 }

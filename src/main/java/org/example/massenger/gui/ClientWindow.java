@@ -1,9 +1,6 @@
 package org.example.massenger.gui;
 
 import org.example.massenger.program.Client;
-import org.example.massenger.program.Server;
-import org.example.massenger.program.Socket;
-import org.example.massenger.program.User;
 import org.example.massenger.ui.ClientView;
 
 import javax.swing.*;
@@ -13,8 +10,7 @@ import java.awt.event.ActionListener;
 
 public class ClientWindow extends JFrame implements ClientView {
     private Client client;
-    private User user;
-    private Socket socket;
+
     public static final String WINDOW_CAPTION = "Chat client";
     private static final int WINDOW_HEIGHT = 230;
     private static final int WINDOW_WIDTH = 350;
@@ -24,7 +20,6 @@ public class ClientWindow extends JFrame implements ClientView {
     private JTextField ipArea;
 
     private JTextField portArea;
-    private Integer defaultPort = 8080;
     private JTextField nameArea;
 
 
@@ -41,12 +36,11 @@ public class ClientWindow extends JFrame implements ClientView {
 
     public ClientWindow(Client client) {
         this.client = client;
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(HIDE_ON_CLOSE);
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setTitle(WINDOW_CAPTION);
         setResizable(false);
-        user = new User();
-        socket = new Socket();
+
         add(createTopPanel(), BorderLayout.NORTH);
         add(createMiddlePanel(), BorderLayout.CENTER);
         add(createBottomPanel(), BorderLayout.SOUTH);
@@ -63,8 +57,8 @@ public class ClientWindow extends JFrame implements ClientView {
 
     Component createAddressPanel() {
         addressPanel = new JPanel(new GridLayout(1, 3));
-        ipArea = new JTextField(socket.getIp());
-        portArea = new JTextField(socket.getPort());
+        ipArea = new JTextField(client.getSocketIP());
+        portArea = new JTextField(client.getSocketPort());
         addressPanel.add(ipArea);
         addressPanel.add(portArea);
         return addressPanel;
@@ -72,8 +66,8 @@ public class ClientWindow extends JFrame implements ClientView {
 
     Component createUserPanel() {
         userPanel = new JPanel(new GridLayout(1, 3));
-        nameArea = new JTextField(user.getName());
-        passwordArea = new JPasswordField(user.getPassword());
+        nameArea = new JTextField(client.getUserName());
+        passwordArea = new JPasswordField(client.getUserPassword());
 
         userPanel.add(nameArea);
         userPanel.add(passwordArea);
@@ -102,7 +96,10 @@ public class ClientWindow extends JFrame implements ClientView {
     Component createMessagesField() {
         messagesField = new JTextArea();
         messagesField.setEditable(false);
-        return messagesField;
+        JScrollPane scroll = new JScrollPane(messagesField);
+        scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        topPanel.add(scroll);
+        return scroll;
     }
 
     Component createBottomPanel() {
@@ -126,24 +123,38 @@ public class ClientWindow extends JFrame implements ClientView {
 
     Component createSendButton() {
         sendButton = new JButton(sendButtonCaption);
+        sendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                sendMessage();
+            }
+        });
         return sendButton;
     }
 
     @Override
     public void login() {
+        client.setUserName(nameArea.getText());
+        client.setUserPassword(passwordArea.getText());
+        client.setSocketIP(ipArea.getText());
+        client.setSocketPort(portArea.getText());
         client.connect();
         takeConnectedView();
     }
 
     @Override
     public void sendMessage() {
-
+        if (client.isConnected()) {
+            client.sendMessage(inputField.getText());
+            inputField.setText("");
+        }
     }
 
     @Override
     public void printMessage(String message) {
         messagesField.append(message);
         messagesField.append("\n");
+
     }
 
     @Override
@@ -156,6 +167,5 @@ public class ClientWindow extends JFrame implements ClientView {
     public void takeDisconnectedView() {
         topPanel.setVisible(true);
 
-        System.out.println("Disconnected view");
     }
 }

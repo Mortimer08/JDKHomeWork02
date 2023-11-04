@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6374582b-debc-48e1-a1c2-a140f6965e6c" name="Changes" comment="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView&#10;added">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="6374582b-debc-48e1-a1c2-a140f6965e6c" name="Changes" comment="Client Window is showed&#10;Client Connect to server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/gui/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/gui/ClientWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/gui/ServerWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/gui/ServerWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/Socket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/program/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/massenger/storage/FileStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/massenger/storage/FileStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698237696111</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Client Window is showed&#10;Client Connect to server">
+      <created>1698506069590</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698506069590</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +135,7 @@
     <MESSAGE value="Server&#10;ServerView&#10;ServerWindow&#10;ClientView" />
     <MESSAGE value="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView" />
     <MESSAGE value="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView&#10;added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server&#10;ServerView&#10;ServerWindow&#10;Client&#10;ClientView&#10;added" />
+    <MESSAGE value="Client Window is showed&#10;Client Connect to server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client Window is showed&#10;Client Connect to server" />
   </component>
 </project>

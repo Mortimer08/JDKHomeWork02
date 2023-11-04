@@ -12,10 +12,10 @@ public class Server {
     private List<Client> clients;
     private final ServerView serverView;
     private final Storage storage;
-    private static final String SERVER_STARTED_MESSAGE = "Server started";
-    private static final String SERVER_IS_RUNNING = "Server is already running";
-    private static final String SERVER_STOPPED_MESSAGE = "Server stopped";
-    private static final String SERVER_IS_STOPPED = "Server is not running";
+    private static final String SERVER_STARTED_MESSAGE = "Server: Server started";
+    private static final String SERVER_IS_RUNNING = "Server: Server is already running";
+    private static final String SERVER_STOPPED_MESSAGE = "Server: Server stopped";
+    private static final String SERVER_IS_STOPPED = "Server: Server is not running";
     private boolean serverRunning;
 
     public Server() {
@@ -29,7 +29,6 @@ public class Server {
         if (!serverRunning) {
             serverRunning = true;
             serverView.print(SERVER_STARTED_MESSAGE);
-//            serverView.print(storage.load());
             addClient();
             addClient();
         } else {
@@ -48,17 +47,21 @@ public class Server {
     }
 
     public void addClient() {
-
         clients.add(new Client(this));
 
     }
 
     public void connectClient(Client client) {
-        client.sendMessage(storage.load());
+        String text = "History:\n" + storage.load();
+        client.receiveMessage(text);
     }
-    void sendMessage(String message){
-        for (Client client: clients) {
-            client.sendMessage(message);
+
+    void sendMessage(String message) {
+        for (Client client : clients) {
+            if (client.isConnected()) {
+                client.receiveMessage(message);
+            }
         }
+        serverView.print(message);
     }
 }
